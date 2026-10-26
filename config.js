@@ -27,7 +27,11 @@ window.MUSIKGIRI = {
       title: "Aawazein",
       description: "Some voices are heard. Others live within.",
       cover: "assets/aawazein-cover.webp",
-      links: { spotify: "", apple: "", youtube: "" }
+      links: {
+        spotify: "https://open.spotify.com/track/2FLDm2KfA3FZoWF4vYCEDt?si=487e37522af543a1",
+        apple: "https://music.apple.com/us/album/aawazein-kuch-suni-kuch-ansuni-single/6827073413",
+        youtube: "https://music.youtube.com/watch?v=FbX4qgA8Who&si=I5WaCI_FeO2bY_Q1"
+      }
     }
   ],
   experiences: { aawazein: { enabled: false, url: "" } }

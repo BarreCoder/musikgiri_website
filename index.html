@@ -3,12 +3,12 @@
 <title>Musikgiri — Where Music Meets Soul</title><meta name="description" content="Musikgiri — original music from the soul. Listen, feel and create.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="story-wall.css"></head>
-<body><header class="nav"><a href="#home" class="wordmark">MUSIKGIRI<span>·</span></a><div id="header-socials" class="header-socials" aria-label="Follow and listen to Musikgiri"></div><button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav id="nav-links" class="nav-links"><a href="#music">Music</a><a href="#story-wall">The Story Wall</a><a href="#about">About</a><a href="#connect">Connect</a></nav></header>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="story-wall.css"><link rel="stylesheet" href="lyrics.css"></head>
+<body><header class="nav"><a href="#home" class="wordmark">MUSIKGIRI<span>·</span></a><div id="header-socials" class="header-socials" aria-label="Follow and listen to Musikgiri"></div><button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav id="nav-links" class="nav-links"><a href="#music">Musik</a><a href="#story-wall">The Story Wall</a><a href="#about">About</a><a href="#connect">Connect</a></nav></header>
 <main>
 <section class="hero" id="home" aria-label="Musikgiri brand logo"><div class="logo-stage"><img class="hero-logo" src="assets/musikgiri-logo.webp" alt="Musikgiri — get musical, with glowing pink musical waves"><span class="logo-energy" aria-hidden="true"></span></div></section>
 <section class="intro container"><span class="eyebrow">Original music · From the soul</span><h1>Where <em>Music</em><br>meets <em>Soul.</em></h1><p>Sounds that speak. Stories that stay. Music made to be felt.</p><div class="intro-actions"><a href="#music" class="button">Explore the music <span>↗</span></a><a href="#connect" class="text-link">Let's collaborate ↗</a></div></section>
-<section id="music" class="section container"><div class="section-head"><div><span class="eyebrow">Listen · Feel · Get musical</span><h2>The Music</h2></div><p>Every song has a story. Find yours in the sound.</p></div><div id="release-grid" class="release-grid"></div></section>
+<section id="music" class="section container"><div class="section-head"><div><span class="eyebrow">Listen · Feel · Get musical</span><h2>The Musik</h2></div><p>Every song has a story. Find yours in the sound.</p></div><div id="release-grid" class="release-grid"></div></section>
 <section id="story-wall" class="story-wall" aria-label="The Story Wall">
  <div class="story-wall-head container"><div><span class="eyebrow">Behind every creation</span><h2>The Story <em>Wall.</em></h2><p>Every creation has a story. Discover the voices, feelings and ideas behind the music.</p></div><div class="story-index" aria-live="off"><span id="story-current">01</span> <span class="story-index-divider">/</span> 03</div></div>
  <div class="story-carousel-shell">
@@ -27,7 +27,132 @@
   <div class="story-timer" aria-hidden="true"><div id="story-timer-progress"></div></div>
  </div>
 </section>
-<section id="about" class="section container about"><span class="eyebrow">The idea behind Musikgiri</span><h2>Don't just sing or listen.<br><em>Live the music.</em></h2><p>Musikgiri is more than making or listening to music. It's about feeling it, living it, and finding your own meaning in it.</p><p>A melody can mean something different to everyone. A rhythm can live in a thought, a moment, a memory, or something you do.</p><p>There is no single way to experience music. There is only <strong>YOUR WAY.</strong></p></section>
+<section id="about" class="section container about"><span class="eyebrow">The idea behind Musikgiri</span><h2>Don't just sing or listen.<br><em>Live the musik.</em></h2><p>Musikgiri is more than making or listening to music. It's about feeling it, living it, and finding your own meaning in it.</p><p>A melody can mean something different to everyone. A rhythm can live in a thought, a moment, a memory, or something you do.</p><p>There is no single way to experience music. There is only <strong>YOUR WAY.</strong></p></section>
 <section id="connect" class="connect"><div class="container connect-inner"><div><span class="eyebrow">Make something together</span><h2>Let's <em>create.</em></h2><p>Music, ideas, collaborations, and possibilities.</p></div><a class="button" href="mailto:mymusikgiri@gmail.com?subject=Collaborate%20with%20Musikgiri">✉ &nbsp; Collaborate</a></div></section>
-</main><footer class="container footer"><div><strong>MUSIKGIRI<span>·</span></strong><p>Where Music meets Soul.</p></div><div id="social-links" class="social-links"></div><small>© <span id="year"></span> Musikgiri · Get musical.</small></footer>
-<script src="story-wall.js" defer></script><script src="config.js"></script><script src="site.js"></script></body></html>
+</main>
+<!-- Lyrics are present in the initial HTML for accessibility and search indexing. -->
+<dialog class="lyrics-dialog" id="lyrics-aawazein" aria-labelledby="lyrics-title-aawazein">
+  <div class="lyrics-dialog-inner">
+    <header class="lyrics-dialog-head"><div><span class="eyebrow">Original lyrics · Musikgiri</span><h2 id="lyrics-title-aawazein">Aawazein <em>Lyrics</em></h2><p>Original lyrics and an English interpretation, side by side.</p></div><button type="button" class="lyrics-close" aria-label="Close Aawazein lyrics" data-close-lyrics>✕</button></header>
+    <div class="lyrics-columns-head" aria-hidden="true"><span>Original lyrics</span><span>....</span></div>
+    <div class="lyrics-dialog-content"><section class="lyric-verse"><h4>Verse 1</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>आवाज़ें कुछ शोर की हैं
+ख़ामोशी की कुछ आवाज़ें
+आवाज़ें
+अल्फ़ाज़ों में तो कहती हैं
+बिन बोले भी कुछ आवाज़ें
+आवाज़ें</p></div><div class="lyric-meaning" lang="en"><p>Some voices arrive as noise; others speak through silence. Some find words, while others communicate without a single word.</p></div></div></section><section class="lyric-verse"><h4>Verse 1 · Reprise</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>आवाज़ें कुछ शोर की हैं
+ख़ामोशी की कुछ आवाज़ें
+आवाज़ें
+अल्फ़ाज़ों में तो कहती हैं
+बिन बोले भी कुछ आवाज़ें
+आवाज़ें</p></div><div class="lyric-meaning" lang="en"><p>The opening thought returns: even silence has a voice, and expression is not limited to what we say aloud.</p></div></div></section><section class="lyric-verse"><h4>Verse 2</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>कुछ मनगढ़ंत सी
+आवाज़ें
+कुछ सच्ची सी भी
+आवाज़ें
+कुछ बाहर की और
+कुछ अंदर की भी
+कुछ मनगढ़ंत सी
+कुछ सच्ची सी भी
+कुछ बाहर की और
+कुछ अंदर की भी</p></div><div class="lyric-meaning" lang="en"><p>Some voices are imagined, others are real. Some come from the world around us; others rise from within. Both shape how we experience life.</p></div></div></section><section class="lyric-verse"><h4>Verse 3</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>मुझसे ये तुझ तक पहुँचे तो मक़सद है ये आवाज़ें
+ख़ुद मैं ही ना सुन पाऊँ तो, बेमतलब की ये आवाज़ें</p></div><div class="lyric-meaning" lang="en"><p>A voice finds purpose when it reaches another person. But if I cannot hear my own inner voice, what meaning does it hold?</p></div></div></section><section class="lyric-verse"><h4>Verse 4</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>कुछ मनगढ़ंत सी आवाज़ें
+कुछ सच्ची सी भी आवाज़
+कुछ बाहर की और कुछ अंदर की भी</p></div><div class="lyric-meaning" lang="en"><p>The song revisits its central contrast: imagined and true, outside and inside. All are part of our inner conversation.</p></div></div></section><section class="lyric-verse"><h4>Bridge</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>जो कह ना सके थे हम कभी
+वो लफ़्ज़ हवा में रह गए
+तू पास आया, समझ लिया
+जो राज़ आँखों में बह गए</p></div><div class="lyric-meaning" lang="en"><p>Words we could never say seemed to linger in the air. Someone close enough understood the secrets our eyes had already revealed.</p></div></div></section><section class="lyric-verse"><h4>Final Chorus</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>दिल से ये दिल तक पहुँचे तो
+फिर धड़कन है ये
+आवाज़ें
+आवाज़ें
+आवाज़ों
+की इस
+दुनिया में
+पहचान है कुछ ये
+आवाज़ें</p></div><div class="lyric-meaning" lang="en"><p>When voices travel from one heart to another, they become a heartbeat — a way of recognizing ourselves amid a world of voices.</p></div></div></section><section class="lyric-verse"><h4>Vibrant Outro</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>कुछ मनगढ़ंत सी आवाज़ें
+कुछ सच्ची सी भी
+आवाज़
+कुछ बाहर की और कुछ अंदर की भी
+आवाज़ें, आवाज़ें
+सुन kehti kya hai..ye
+आवाज़ें, आवाज़ें
+आवाज़ें…
+
+Kho ja Tu..
+Musikgiri Main..
+
+(Aawazein)</p></div><div class="lyric-meaning" lang="en"><p>Listen to what these voices are trying to say. The outro carries that invitation into Musikgiri: lose yourself in music and in the voices that make you who you are.</p></div></div></section></div>
+    <footer class="lyrics-dialog-foot"><span>© Musikgiri · Original lyrics</span><button type="button" class="lyrics-done" data-close-lyrics>Close lyrics ↑</button></footer>
+  </div>
+</dialog>
+<dialog class="lyrics-dialog" id="lyrics-musikgiri" aria-labelledby="lyrics-title-musikgiri">
+  <div class="lyrics-dialog-inner">
+    <header class="lyrics-dialog-head"><div><span class="eyebrow">Original lyrics · Musikgiri</span><h2 id="lyrics-title-musikgiri">Musikgiri <em>Lyrics</em></h2><p>Original lyrics.</p></div><button type="button" class="lyrics-close" aria-label="Close Musikgiri lyrics" data-close-lyrics>✕</button></header>
+    <div class="lyrics-columns-head" aria-hidden="true"><span>Original lyrics</span><span>Meaning in English</span></div>
+    <div class="lyrics-dialog-content"><section class="lyric-verse"><h4>Opening</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>खो जा तू
+Musikgiri main
+
+सुन…</p></div><div class="lyric-meaning" lang="en"><p>Let yourself get lost in Musikgiri. Listen — this is an invitation to act, not just to hear.</p></div></div></section><section class="lyric-verse"><h4>Verse 1</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>आये जो मौका
+उसपे मारेगा क्या तू चौका
+या यूँ ही जाने देगा
+समझ के क़िस्मत का एक धोखा..
+
+भूले से हैं अल्फ़ाज़
+तेरी बिखरीं सी है हिम्मत क्यों ??
+झूठे से डर ने घेरा
+हर इंसा की ये फितरत क्यों ??
+जैसा है हाल तेरा
+वैसा ही सा है हाल मेरा भी,
+जिसमें है तू उलझा
+वैसा ही मायाजाल मेरा भी !!
+खोये से है ख़याल तेरी
+भटकी सी है नज़रें ये क्युँ ??
+संग तेरे है music
+क्यों लगता तुझको तनहा है तू ??</p></div><div class="lyric-meaning" lang="en"><p>When opportunity comes, will you seize it or dismiss it as another trick of fate? Fear and uncertainty can scatter our courage, but we all struggle with them. Music is beside you — you are not alone.</p></div></div></section><section class="lyric-verse"><h4>Chorus · First</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>चल चल चल उठ जा
+और खो जा तू musikgiri में
+मौक़ा जो जाता,
+नई फिर आता मुड के ज़िंदगी में
+ये पल है तेरा
+तू बन जा हीरो इस घड़ी में
+मौक़े पे मारा चौका
+लिख दे अपनी हिस्ट्री में</p></div><div class="lyric-meaning" lang="en"><p>Get up and lose yourself in Musikgiri. A missed opportunity may not return. This is your moment to become your own hero and write your own history.</p></div></div></section><section class="lyric-verse"><h4>Chorus · Repeat</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>चल चल चल उठ जा
+और खो जा तू musikgiri में
+मौक़ा जो जाता,
+नई फिर आता मुड के ज़िंदगी में
+ये पल है तेरा
+तू बन जा हीरो इस घड़ी में
+मौक़े पे मारा चौका
+लिख दे अपनी हिस्ट्री में</p></div><div class="lyric-meaning" lang="en"><p>The call to action repeats, urging you to take ownership of the moment rather than wait for permission or perfect circumstances.</p></div></div></section><section class="lyric-verse"><h4>Verse 2</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>गीतों में दम नहीं
+पर तुम किसी से कम नहीं, ये
+बोले जिसे बोलना होगा
+सोचने वाले हम नहीं, क्युँ ??
+जीतने मुँह बातें उतनी
+दिन जीतने रातें उतनी
+कुछ कुछ तो लोग कहेंगे
+की किसने परवाहें कितनी ?!?
+दिल में (अ) गर हो फ़ितूर
+और कुछ कर जाने की शिद्दत तो
+राहों में काँटे जितने
+दिखते गुल की सूरत के वो
+निकलें जो अब मैदा में
+लहराएँगे परचम ख़ुद का
+आवाज़ें कर बुलंद
+और सन्नाटों को चीरे कविता</p></div><div class="lyric-meaning" lang="en"><p>Other people will always have opinions. Their judgments do not define your worth. With conviction and determination, even obstacles can look like possibilities. Step forward, raise your voice, and break the silence.</p></div></div></section><section class="lyric-verse"><h4>Chorus · Return</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>चल चल चल उठ जा
+और खो जा तू musikgiri में
+मौक़ा जो जाता,
+नई फिर आता मुड के ज़िंदगी में
+ये पल है तेरा
+तू बन जा हीरो इस घड़ी में
+मौक़े पे मारा चौका
+लिख दे अपनी हिस्ट्री में</p></div><div class="lyric-meaning" lang="en"><p>The message returns: make the most of the opportunity in front of you and create your own story.</p></div></div></section><section class="lyric-verse"><h4>Final Chorus</h4><div class="lyric-pair"><div class="lyric-original" lang="hi"><p>चल चल चल उठ जा
+और खो जा तू musikgiri में
+मौक़ा जो जाता,
+नई फिर आता मुड के ज़िंदगी में
+ये पल है तेरा
+तू बन जा हीरो इस घड़ी में
+मौक़े पे मारा चौका
+लिख दे अपनी हिस्ट्री में</p></div><div class="lyric-meaning" lang="en"><p>A final push to move beyond hesitation — rise, act, and live the music.</p></div></div></section></div>
+    <footer class="lyrics-dialog-foot"><span>© Musikgiri · Original lyrics</span><button type="button" class="lyrics-done" data-close-lyrics>Close lyrics ↑</button></footer>
+  </div>
+</dialog>
+<footer class="container footer"><div><strong>MUSIKGIRI<span>·</span></strong><p>Where Music meets Soul.</p></div><div id="social-links" class="social-links"></div><small>© <span id="year"></span> Musikgiri · Get musical.</small></footer>
+<script src="story-wall.js" defer></script><script src="config.js"></script><script src="site.js"></script><script src="lyrics.js" defer></script></body></html>
