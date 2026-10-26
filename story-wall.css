@@ -1,0 +1,50 @@
+/* The Story Wall — horizontal, timed, swipeable */
+.story-wall{background:#0c0a11;border-top:1px solid #332536;border-bottom:1px solid #332536;overflow:hidden}
+.story-wall-head{display:flex;align-items:end;justify-content:space-between;gap:25px;padding-top:64px;padding-bottom:26px}
+.story-wall-head h2{font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:clamp(44px,6vw,78px);line-height:1.12;margin:12px 0 10px}
+.story-wall-head p{margin:0;max-width:590px;font-size:15px}
+.story-index{color:#f7559d;font-size:22px;letter-spacing:.13em;white-space:nowrap;padding-bottom:6px}
+.story-index-divider{color:#80737e}
+.story-carousel-shell{position:relative}
+.story-carousel{display:flex;width:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y}
+.story-carousel::-webkit-scrollbar{display:none}
+.story-carousel:focus-visible{outline:2px solid #f7559d;outline-offset:-2px}
+.story-panel{flex:0 0 100%;width:100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always;background:radial-gradient(ellipse at 77% 35%,#52233452,transparent 52%),linear-gradient(115deg,#17101b,#0c0b12 75%)}
+.story-musikgiri{background:radial-gradient(ellipse at 78% 48%,#7a1d5c3c,transparent 53%),#0e0b14}
+.story-future{background:radial-gradient(ellipse at 75% 50%,#38234d88,transparent 55%),#0d0b12}
+.story-panel-inner{min-height:570px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,40%);gap:clamp(22px,5vw,72px);align-items:center;padding-top:38px;padding-bottom:38px}
+.story-words{max-width:630px}
+.story-words h3{font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:clamp(52px,7vw,94px);line-height:1.1;letter-spacing:-.045em;margin:12px 0 24px}
+.story-words p{max-width:570px;font-size:clamp(14px,1.3vw,17px);line-height:1.65;margin:0 0 15px}
+.story-words .story-lead{font-size:clamp(18px,2vw,25px);line-height:1.5;color:#fff}
+.story-words strong{color:#fff}
+.story-words .story-signoff{border-left:2px solid #f7559d;padding-left:17px;margin-top:25px;color:#eee0e8}
+.story-picture{display:flex;justify-content:center;align-items:center;min-width:0}
+.story-picture img{display:block;max-width:100%;width:auto;max-height:530px;object-fit:contain;border-radius:8px;box-shadow:0 18px 60px #0008}
+.story-square img{max-width:400px;max-height:400px;width:100%;aspect-ratio:1;object-fit:contain}
+.story-future-art{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:25px;aspect-ratio:9/12;max-height:460px;border:1px solid #5b32544f;border-radius:14px;background:radial-gradient(circle at 50% 42%,#7d2e6e44,transparent 50%);letter-spacing:.38em;color:#bba5b5;font-size:13px}
+.future-wave{font-size:clamp(100px,14vw,210px);line-height:1;color:#ed70b5;text-shadow:0 0 60px #f7559d55}
+.story-toolbar{display:flex;justify-content:center;align-items:center;gap:17px;padding-top:15px;padding-bottom:19px}
+.story-arrow,.story-play,.story-dots button{border:1px solid #72516c;background:#1b1420;color:#fff;cursor:pointer}
+.story-arrow{width:43px;height:43px;border-radius:50%;font-size:22px;display:grid;place-items:center}
+.story-arrow:hover,.story-play:hover{border-color:#f7559d}
+.story-dots{display:flex;align-items:center;gap:11px}
+.story-dots button{height:9px;width:9px;padding:0;border-radius:50%;background:#665366;border:0;transition:width .2s,background .2s}
+.story-dots button[aria-current="true"]{width:30px;border-radius:8px;background:#f7559d}
+.story-play{border-radius:30px;padding:11px 16px;font-size:12px;letter-spacing:.04em;margin-left:12px}
+.story-timer{height:3px;background:#362438;width:100%}
+.story-timer-progress,.story-timer>div{height:100%;width:0;background:linear-gradient(90deg,#a83a7d,#ff8cc7);transition:width .12s linear}
+/* A gentle pink energy sweep over the actual logo, every ~8 seconds. */
+.hero{position:relative}
+.logo-stage{position:relative;isolation:isolate;width:min(100%,1500px);margin-inline:auto;overflow:hidden}
+.logo-stage .hero-logo{display:block;width:100%;height:auto;position:relative;inset:auto;background:none;object-fit:contain;animation:logo-breathe 8s ease-in-out infinite}
+.logo-energy{position:absolute;z-index:2;pointer-events:none;inset:0;background:linear-gradient(105deg,transparent 41%,#ff85c400 46%,#ff98d450 49%,#ffb7e480 50%,#ff98d450 51%,transparent 55%);mix-blend-mode:screen;transform:translateX(-135%);animation:logo-sweep 8s ease-in-out infinite}
+@keyframes logo-sweep{0%,14%{transform:translateX(-135%);opacity:0}17%{opacity:1}39%{transform:translateX(135%);opacity:.9}42%,100%{transform:translateX(135%);opacity:0}}
+@keyframes logo-breathe{0%,100%{filter:brightness(1)}27%{filter:brightness(1.14)}44%{filter:brightness(1)}}
+@media(max-width:850px){.story-panel-inner{grid-template-columns:minmax(0,1fr) minmax(0,38%);gap:25px;min-height:520px}.story-picture img{max-height:470px}}
+@media(max-width:620px){.story-wall-head{padding-top:48px;padding-bottom:16px}.story-wall-head p{font-size:13px}.story-index{font-size:15px}.story-panel-inner{grid-template-columns:1fr;gap:16px;min-height:0;padding-top:18px;padding-bottom:20px}.story-words h3{font-size:clamp(44px,11vw,65px);margin:9px 0 14px}.story-words p{font-size:13px;line-height:1.5;margin-bottom:9px}.story-words .story-lead{font-size:17px}.story-words .story-signoff{margin-top:14px}.story-picture img{max-height:310px;max-width:80%}.story-square img{max-width:230px}.story-future-art{height:230px;aspect-ratio:auto}.future-wave{font-size:100px}.story-toolbar{gap:12px}.story-play{margin-left:2px}.story-arrow{width:38px;height:38px}}
+@media(prefers-reduced-motion:reduce){.logo-stage .hero-logo,.logo-energy{animation:none!important}.story-carousel{scroll-behavior:auto}.story-dots button,.story-timer-progress{transition:none}}
+/* Preserve the original logo's aspect ratio rather than clipping it to the old hero height. */
+.hero{height:auto;min-height:0;padding:90px 0 12px;display:flex;align-items:center;justify-content:center}
+@media(max-width:780px){.hero{padding-top:126px}}
+@media(max-width:620px){.hero{height:auto;min-height:0;padding-top:124px;padding-bottom:8px}}
