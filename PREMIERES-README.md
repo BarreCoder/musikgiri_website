@@ -9,3 +9,5 @@ Visit `https://musikgiri.com/premieres/` to share the Aawazein inner-circle prem
 - GitHub Pages serves `/premieres/` automatically from `premieres/index.html`. No build system or backend needed.
 
 Upload the *contents* of `musikgiri_website/` to the repository root. Keep `CNAME` at the repository root.
+
+Mobile layout update: On screens up to 850px wide, the four streaming buttons now appear above the 9:16 Aawazein poster, beneath the song title. Desktop layout remains unchanged. Audio controls remain on the poster.

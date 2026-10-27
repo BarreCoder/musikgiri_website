@@ -38,3 +38,23 @@
   .premieres-page #premieres .premiere-audio-copy {max-width:38%;}
   .premieres-page #premieres .premiere-audio-toggle {padding:8px;}
 }
+
+/* Mobile-first listening: platform choices immediately above the 9:16 poster. */
+.premieres-page #premieres .premiere-mobile-listen {display:none;}
+@media (max-width:850px) {
+  .premieres-page #premieres .premiere-mobile-listen {display:block;margin-bottom:22px;}
+  .premieres-page #premieres .premiere-mobile-listen h3 {font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.2rem,7vw,3.2rem);font-weight:400;line-height:1.1;color:#fff;margin:0 0 6px;}
+  .premieres-page #premieres .premiere-mobile-subtitle {font-size:.9rem;line-height:1.5;color:#c8bac3;margin:0 0 15px;}
+  .premieres-page #premieres .premiere-mobile-label {font-size:.67rem;font-weight:700;letter-spacing:.18em;color:#d0c9cc;margin:0 0 10px;}
+  .premieres-page #premieres .premiere-mobile-stream-links {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;}
+  .premieres-page #premieres .premiere-mobile-stream-links .premiere-stream {display:flex;flex-direction:column;justify-content:center;gap:6px;min-width:0;min-height:73px;padding:9px 3px;font-size:.67rem;text-align:center;line-height:1.2;}
+  .premieres-page #premieres .premiere-mobile-stream-links .premiere-stream .platform-mark {flex:0 0 24px;}
+  .premieres-page #premieres .premiere-mobile-stream-links .premiere-link-arrow {display:none;}
+  .premieres-page #premieres .premiere-content > h3,
+  .premieres-page #premieres .premiere-content > .premiere-listen-label,
+  .premieres-page #premieres .premiere-content > .premiere-stream-links {display:none;}
+}
+@media (max-width:370px) {
+  .premieres-page #premieres .premiere-mobile-stream-links {gap:5px;}
+  .premieres-page #premieres .premiere-mobile-stream-links .premiere-stream {font-size:.59rem;min-height:68px;}
+}
