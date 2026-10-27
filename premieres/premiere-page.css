@@ -58,3 +58,26 @@
   .premieres-page #premieres .premiere-mobile-stream-links {gap:5px;}
   .premieres-page #premieres .premiere-mobile-stream-links .premiere-stream {font-size:.59rem;min-height:68px;}
 }
+
+/* Read Lyrics is the fifth action in the premiere's streaming row. */
+.premieres-page .premiere-stream-links .premiere-lyrics-button {
+  appearance:none;cursor:pointer;font:inherit;color:inherit;
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.18);
+}
+.premieres-page .premiere-lyrics-button:hover,
+.premieres-page .premiere-lyrics-button:focus-visible {
+  border-color:#f6a4bd;color:#fff;background:rgba(247,85,157,.12);
+}
+.premieres-page .premiere-lyrics-icon {width:23px;height:23px;flex-shrink:0;}
+.premieres-page .lyrics-dialog {z-index:9999;}
+@media (max-width:850px) {
+  .premieres-page #premieres .premiere-mobile-stream-links {grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;}
+  .premieres-page #premieres .premiere-mobile-stream-links .premiere-stream {
+    font-size:clamp(.53rem,1.8vw,.67rem);min-height:75px;padding:8px 2px;overflow-wrap:anywhere;
+  }
+  .premieres-page #premieres .premiere-mobile-stream-links .premiere-lyrics-button {flex-direction:column;justify-content:center;gap:6px;}
+}
+@media (max-width:370px) {
+  .premieres-page #premieres .premiere-mobile-stream-links {gap:4px;}
+  .premieres-page #premieres .premiere-mobile-stream-links .premiere-stream {font-size:.54rem;min-height:70px;}
+}
