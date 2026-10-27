@@ -1,0 +1,105 @@
+/* Musikgiri premieres: self-contained; does not change the existing Story Wall or lyrics dialogs. */
+#premieres {scroll-margin-top: 84px; background: radial-gradient(ellipse at 72% 34%, rgba(194,91,62,.09), transparent 47%), #0a0a0e; padding: clamp(48px, 6vw, 90px) 0 clamp(55px, 7vw, 100px); color:#f9f6f4;}
+#premieres * {box-sizing:border-box}
+#premieres .premiere-heading {display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:clamp(24px,4vw,44px)}
+#premieres .premiere-heading h2 {font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.8rem,5vw,5.2rem);font-weight:400;line-height:1.06;margin:8px 0 0;color:#fff}
+#premieres .premiere-period {color:#f4a18e}
+#premieres .premiere-heading > p {max-width:290px;color:#a8a3aa;font-size:.95rem;line-height:1.6;margin:0}
+#premieres .premiere-showcase {display:grid;grid-template-columns:minmax(0, 1.03fr) minmax(0, .97fr);gap:clamp(28px,5vw,76px);align-items:center}
+#premieres .premiere-art {position:relative;aspect-ratio:941 / 1420;max-height:720px;min-height:400px;overflow:hidden;border-radius:16px;background:#17181b;box-shadow:0 22px 75px rgba(0,0,0,.48);isolation:isolate}
+#premieres .premiere-art:after {content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(4,5,9,.72) 0%,transparent 20%,transparent 82%,rgba(0,0,0,.2) 100%);z-index:2}
+#premieres .premiere-art-frames {position:absolute;inset:0}
+#premieres .premiere-frame {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;opacity:0;animation:premiereDissolve 28s infinite;will-change:opacity,transform}
+#premieres .premiere-frame:nth-child(1){animation-delay:0s}
+#premieres .premiere-frame:nth-child(2){animation-delay:-21s}
+#premieres .premiere-frame:nth-child(3){animation-delay:-14s}
+#premieres .premiere-frame:nth-child(4){animation-delay:-7s}
+@keyframes premiereDissolve {0%, 21% {opacity:1;transform:scale(1)} 25%, 96% {opacity:0;transform:scale(1.025)} 100% {opacity:1;transform:scale(1)}}
+#premieres .premiere-art-label,#premieres .premiere-art-count {position:absolute;z-index:3;bottom:19px;color:#f8f5f4;font-size:.68rem;letter-spacing:.16em;text-shadow:0 1px 8px #000}
+#premieres .premiere-art-label {left:22px;font-weight:700}
+#premieres .premiere-art-count {right:22px;color:#c6c2c3;letter-spacing:.05em}
+#premieres .premiere-content {min-width:0;padding:10px 0}
+#premieres .premiere-kicker {display:inline-flex;align-items:center;gap:9px;color:#d7b5ae;letter-spacing:.18em;text-transform:uppercase;font-size:.7rem;font-weight:700}
+#premieres .premiere-live-dot {width:7px;height:7px;background:#eea393;border-radius:50%;box-shadow:0 0 10px rgba(239,139,115,.4)}
+#premieres .premiere-content h3 {font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.3rem,6vw,6.7rem);font-weight:400;letter-spacing:-.035em;line-height:1.06;margin:14px 0 4px;color:#fff}
+#premieres .premiere-subtitle {font-size:clamp(.85rem,1.3vw,1rem);letter-spacing:.13em;color:#b1aab1;margin:0 0 30px}
+#premieres .premiere-quote {font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.5rem,2.6vw,2.6rem);line-height:1.38;margin:0 0 20px;color:#fff}
+#premieres .premiere-quote em {color:#e7aa9b;font-weight:400}
+#premieres .premiere-description {font-size:.98rem;line-height:1.8;color:#b9b4ba;max-width:490px;margin:0}
+#premieres .premiere-divider {height:1px;background:linear-gradient(90deg,#66535a,transparent);margin:26px 0 23px}
+#premieres .premiere-listen-label {font-size:.68rem;font-weight:700;letter-spacing:.2em;color:#d0c9cc;margin:0 0 13px}
+#premieres .premiere-stream-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#premieres .premiere-stream {display:flex;align-items:center;gap:10px;min-height:52px;border:1px solid rgba(255,255,255,.17);border-radius:12px;background:rgba(255,255,255,.035);color:#f5f2f4;text-decoration:none;padding:10px 13px;font-size:.87rem;font-weight:600;transition:background .2s,border-color .2s,transform .2s}
+#premieres .premiere-stream:hover,#premieres .premiere-stream:focus-visible {background:rgba(255,255,255,.1);border-color:#e8a49b;transform:translateY(-2px)}
+#premieres .premiere-stream:focus-visible,#premieres .premiere-download:focus-visible {outline:2px solid #f0b5a4;outline-offset:3px}
+#premieres .premiere-stream .platform-mark {flex:0 0 24px;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center}
+#premieres .premiere-stream .platform-mark svg {width:24px;height:24px}
+#premieres .premiere-link-arrow {margin-left:auto;font-size:1.05rem;color:#aaa0a8}
+#premieres .premiere-bottom-actions {display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:20px}
+#premieres .premiere-inner-circle {display:inline-flex;gap:7px;align-items:center;color:#a9a1a9;font-size:.76rem;line-height:1.5}
+#premieres .premiere-inner-circle span {color:#e8a49b}
+#premieres .premiere-download {color:#f0b5a4;text-decoration:none;font-size:.8rem;font-weight:600;border-bottom:1px solid rgba(240,181,164,.4);padding-bottom:2px}
+#premieres .premiere-hint {color:#817c84;font-size:.74rem;line-height:1.6;margin:18px 0 0}
+#premieres .premiere-hint strong {color:#b7adb4;font-weight:500;overflow-wrap:anywhere}
+/* Icons only on existing music cards, with screen-reader labels retained. */
+#release-grid .platforms a.musik-platform-icon {display:inline-flex;align-items:center;justify-content:center;min-width:42px;min-height:42px;width:44px;height:44px;border-radius:12px;padding:9px;line-height:1;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);transition:background .2s,border-color .2s,transform .2s;color:#eee;text-decoration:none}
+#release-grid .platforms a.musik-platform-icon:hover,#release-grid .platforms a.musik-platform-icon:focus-visible {background:rgba(255,255,255,.13);border-color:#f0b5a4;transform:translateY(-2px)}
+#release-grid .platforms a.musik-platform-icon svg {width:24px;height:24px;display:block}
+#release-grid .platforms {display:flex;gap:9px;flex-wrap:wrap}
+@media(max-width:850px){#premieres .premiere-showcase {grid-template-columns:minmax(0,1fr);gap:30px}#premieres .premiere-art {width:min(100%,470px);min-height:0;max-height:none;aspect-ratio:941/1350;margin-inline:auto}#premieres .premiere-content {width:min(100%,650px);margin-inline:auto}#premieres .premiere-heading {align-items:start}#premieres .premiere-heading > p {max-width:210px}}
+@media(max-width:560px){#premieres {padding:50px 0 64px}#premieres .premiere-heading {display:block}#premieres .premiere-heading > p {max-width:none;margin-top:12px}#premieres .premiere-art {width:100%;aspect-ratio:941/1180;border-radius:12px}#premieres .premiere-art-count {display:none}#premieres .premiere-content h3 {font-size:3.7rem}#premieres .premiere-quote {font-size:1.7rem}#premieres .premiere-description {font-size:.94rem}#premieres .premiere-stream {min-height:54px;padding:10px;font-size:.79rem;gap:7px}#premieres .premiere-stream .platform-mark,#premieres .premiere-stream .platform-mark svg {width:21px;height:21px;flex-basis:21px}#premieres .premiere-link-arrow {font-size:.85rem}#premieres .premiere-art-label {font-size:.6rem}}
+@media(max-width:340px){#premieres .premiere-stream-links {grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){#premieres .premiere-frame {animation:none!important;opacity:0;transform:none}#premieres .premiere-frame:first-child {opacity:1}#premieres .premiere-stream,#release-grid .platforms a.musik-platform-icon {transition:none}}
+/* One-minute preview: intentionally quiet until a visitor explicitly unmutes. */
+#premieres .premiere-audio {margin:22px 0 4px;padding:17px 18px 14px;border:1px solid rgba(235,169,151,.38);border-radius:15px;background:linear-gradient(125deg,rgba(222,132,111,.12),rgba(255,255,255,.025));box-shadow:0 9px 28px rgba(0,0,0,.13)}
+#premieres .premiere-audio-top {display:flex;justify-content:space-between;align-items:center;gap:14px}
+#premieres .premiere-audio-copy {display:flex;flex-direction:column;gap:3px;min-width:0}
+#premieres .premiere-audio-eyebrow {font-size:.64rem;letter-spacing:.16em;font-weight:700;color:#e9a899}
+#premieres .premiere-audio-copy strong {font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.15rem,2vw,1.45rem);font-weight:500;color:#fff}
+#premieres .premiere-audio-status {font-size:.76rem;color:#c4b8b9}
+#premieres .premiere-audio-actions {display:flex;align-items:center;gap:8px;flex-shrink:0}
+#premieres .premiere-audio-toggle,#premieres .premiere-audio-play {display:inline-flex;justify-content:center;align-items:center;gap:7px;min-height:46px;border-radius:12px;border:1px solid rgba(255,255,255,.26);cursor:pointer;font:600 .79rem 'DM Sans',sans-serif;transition:background .2s,border-color .2s;color:#fff}
+#premieres .premiere-audio-toggle {padding:9px 13px;background:#b85473;border-color:#d7748c}
+#premieres .premiere-audio-toggle:hover,#premieres .premiere-audio-toggle:focus-visible {background:#d26a89}
+#premieres .premiere-audio-toggle.is-unmuted {background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.28)}
+#premieres .premiere-audio-toggle svg {width:19px;height:19px}
+#premieres .premiere-audio-toggle .premiere-audio-live-icon {display:none}
+#premieres .premiere-audio-toggle.is-unmuted .premiere-audio-muted-icon {display:none}
+#premieres .premiere-audio-toggle.is-unmuted .premiere-audio-live-icon {display:block}
+#premieres .premiere-audio-play {width:46px;background:rgba(255,255,255,.08);font-size:1rem}
+#premieres .premiere-audio-play:hover {background:rgba(255,255,255,.17)}
+#premieres .premiere-audio-toggle:focus-visible,#premieres .premiere-audio-play:focus-visible {outline:2px solid #fff;outline-offset:3px}
+#premieres .premiere-audio-progress {height:3px;border-radius:4px;background:rgba(255,255,255,.18);overflow:hidden;margin:16px 0 7px}
+#premieres #premiere-audio-progress-fill {height:100%;width:0;background:#ed9db4;transition:width .2s linear}
+#premieres .premiere-audio-duration {font-size:.69rem;color:#aaa0a5}
+@media(max-width:460px){#premieres .premiere-audio {padding:14px 12px}#premieres .premiere-audio-top {align-items:flex-start;flex-direction:column}#premieres .premiere-audio-actions {width:100%}#premieres .premiere-audio-toggle {flex:1}#premieres .premiere-audio-play {flex:0 0 46px}}
+@media(prefers-reduced-motion:reduce){#premieres #premiere-audio-progress-fill {transition:none}}
+
+/* Overlay the audio controls directly on the dissolving poster. */
+#premieres .premiere-art:after {background:linear-gradient(0deg,rgba(2,3,7,.96) 0%,rgba(2,3,7,.55) 18%,transparent 44%,transparent 85%,rgba(0,0,0,.2) 100%)}
+#premieres .premiere-art-label,#premieres .premiere-art-count {top:18px;bottom:auto}
+#premieres .premiere-audio {position:absolute;z-index:5;bottom:0;left:0;right:0;margin:0;padding:18px 20px 18px;border:0;border-radius:0;background:none;box-shadow:none;color:#fff;text-shadow:0 1px 9px rgba(0,0,0,.75)}
+#premieres .premiere-audio-top {flex-direction:row;align-items:center;gap:12px}
+#premieres .premiere-audio-copy {gap:3px}
+#premieres .premiere-audio-eyebrow {font-size:.63rem;color:#ffb9c6}
+#premieres .premiere-audio-copy strong {font-size:clamp(1rem,2vw,1.23rem)}
+#premieres .premiere-audio-status {font-size:.73rem;color:#e1d8dd}
+#premieres .premiere-audio-actions {width:auto;flex-direction:row;align-items:center;gap:8px}
+#premieres .premiere-audio-toggle {flex:0 0 auto;background:rgba(211,77,116,.92);border-color:rgba(255,190,209,.75);padding:10px 13px;min-height:46px;box-shadow:0 3px 15px rgba(0,0,0,.3)}
+#premieres .premiere-audio-play {flex:0 0 46px;background:rgba(20,20,24,.72);min-height:46px}
+#premieres .premiere-audio-progress {height:5px;margin:14px 0 6px;background:rgba(255,255,255,.35);border-radius:10px}
+#premieres #premiere-audio-progress-fill {background:linear-gradient(90deg,#e2a5b3,#fff);border-radius:10px}
+#premieres .premiere-audio-duration {font-size:.67rem;color:#d8d0d6}
+@media(max-width:560px){
+  #premieres .premiere-art-label {top:14px;left:14px}
+  #premieres .premiere-audio {padding:13px 13px 14px}
+  #premieres .premiere-audio-top {flex-direction:row;align-items:center;gap:8px}
+  #premieres .premiere-audio-copy strong {font-size:1rem}
+  #premieres .premiere-audio-eyebrow {font-size:.57rem;letter-spacing:.09em}
+  #premieres .premiere-audio-status {font-size:.67rem}
+  #premieres .premiere-audio-actions {width:auto;gap:6px}
+  #premieres .premiere-audio-toggle {padding:8px 9px;min-height:44px;font-size:.73rem}
+  #premieres .premiere-audio-toggle svg {width:17px;height:17px}
+  #premieres .premiere-audio-play {flex:0 0 44px;width:44px;min-height:44px}
+}
+@media(max-width:370px){#premieres .premiere-audio-copy strong {font-size:.89rem}#premieres .premiere-audio-status {font-size:.6rem}#premieres .premiere-audio-toggle {gap:4px}}
