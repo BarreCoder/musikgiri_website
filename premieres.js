@@ -8,12 +8,6 @@
     amazon: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="5" fill="#162a35"/><text x="12" y="15.6" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#fff">a</text><path d="M6 18.1c4.1 2.2 8.3 2.2 12.3-.3" stroke="#31c5e9" stroke-width="1.6" stroke-linecap="round" fill="none"/><path d="m16.9 16.8 2.3.1-.6 2.1" fill="none" stroke="#31c5e9" stroke-width="1.2" stroke-linecap="round"/></svg>`
   };
   const labels = {spotify:'Spotify',youtube:'YouTube Music',apple:'Apple Music',amazon:'Amazon Music'};
-  const aawazeinLinks = {
-    spotify:'https://open.spotify.com/track/2FLDm2KfA3FZoWF4vYCEDt?si=487e37522af543a1',
-    youtube:'https://music.youtube.com/watch?v=FbX4qgA8Who&si=I5WaCI_FeO2bY_Q1',
-    apple:'https://music.apple.com/us/album/aawazein-kuch-suni-kuch-ansuni-single/6827073413',
-    amazon:'https://music.amazon.com/tracks/B0HP9SXJ6K?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_dEst1hFN79Nn7c9WFbH70xwsD'
-  };
   function safeUrl(url) {try {const u = new URL(url);return u.protocol === 'https:' ? u.href : null;}catch {return null;}}
   function addIcon(a,key) {
     if (!icons[key]) return;
@@ -30,26 +24,8 @@
   });
   function updateReleaseCards() {
     document.querySelectorAll('#release-grid .release').forEach(card => {
-      const title=(card.querySelector('h3')?.textContent||'').toLowerCase().trim();
-      const isAawazein=title.includes('aawazein') || title.includes('आवाज़ें');
-      let links=card.querySelector('.platforms');
-      if (!links && isAawazein) {
-        links=document.createElement('div');links.className='platforms';
-        (card.querySelector('.release-body')||card).append(links);
-      }
-      if (!links) return;
-      if (isAawazein) {
-        const status=card.querySelector('.status');
-        if (status && /coming soon|upcoming|not yet/i.test(status.textContent)) status.textContent='Listen now';
-        // These user-provided release links supersede any older placeholder URLs.
-        Object.entries(aawazeinLinks).forEach(([key,url]) => {
-          let a=links.querySelector(`[data-platform="${key}"]`);
-          if(!a) a=Array.from(links.querySelectorAll('a')).find(el => (el.textContent+' '+el.getAttribute('aria-label')).toLowerCase().includes(key === 'youtube' ? 'youtube' : key === 'apple' ? 'apple' : key));
-          if(!a){a=document.createElement('a');links.append(a);}
-          a.dataset.platform=key;
-          a.href=safeUrl(url);
-        });
-      }
+      const links=card.querySelector('.platforms');
+      if(!links) return;
       links.querySelectorAll('a').forEach(a => {
         if (a.classList.contains('musik-platform-icon')) return;
         const str=(a.dataset.platform || a.textContent || a.getAttribute('aria-label') || '').toLowerCase();
@@ -88,7 +64,7 @@
     const isMuted = audio.muted;
     toggle.classList.toggle('is-unmuted', !isMuted);
     toggle.setAttribute('aria-pressed', String(!isMuted));
-    toggle.setAttribute('aria-label', isMuted ? 'Unmute the Aawazein preview' : 'Mute the Aawazein preview');
+    toggle.setAttribute('aria-label', isMuted ? 'Unmute preview' : 'Mute preview');
     toggleLabel.textContent = isMuted ? 'Unmute' : 'Mute';
     playButton.textContent = audio.paused ? '▶' : 'Ⅱ';
     playButton.setAttribute('aria-label', audio.paused ? 'Play preview' : 'Pause preview');
@@ -125,3 +101,6 @@
   }
   update();
 })();
+
+// Any number of poster frames, including a single still.
+(() => {const frames=[...document.querySelectorAll('.premiere-frame')];if(frames.length<2||matchMedia('(prefers-reduced-motion: reduce)').matches)return;let i=0;setInterval(()=>{frames[i].classList.remove('is-active');i=(i+1)%frames.length;frames[i].classList.add('is-active');},7000);})();

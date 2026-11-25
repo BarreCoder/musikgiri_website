@@ -3,6 +3,7 @@
   const rail=document.getElementById('story-carousel');
   if(!rail)return;
   const slides=Array.from(rail.querySelectorAll('.story-panel'));
+  if(!slides.length){document.getElementById('story-wall').hidden=true;return;}
   const dots=Array.from(document.querySelectorAll('.story-dots [data-story]'));
   const current=document.getElementById('story-current');
   const progress=document.getElementById('story-timer-progress');

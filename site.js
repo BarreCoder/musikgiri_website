@@ -1,20 +1,26 @@
 (() => {
   const cfg=window.MUSIKGIRI || {};
   const safeUrl=(v)=>{try{const u=new URL(v);return u.protocol==="https:"?u.href:null}catch{return null}};
-  const platforms={spotify:"Spotify",apple:"Apple Music",youtube:"YouTube Music"};
+  const platforms={spotify:"Spotify",apple:"Apple Music",youtube:"YouTube Music",amazon:"Amazon Music"};
   const grid=document.querySelector("#release-grid");
   for(const release of cfg.releases||[]){
-    const card=document.createElement("article");card.className="release";
-    const img=document.createElement("img");img.src=release.cover||"";img.alt=release.title+" cover art";img.loading="lazy";card.append(img);
+    if(release.showInMusik===false)continue;
+    const card=document.createElement("article");card.className="release";card.dataset.releaseId=release.id;
+    const img=document.createElement("img");if(release.cover)img.src=release.cover;img.alt=release.title+" cover art";img.loading="lazy";if(release.cover)card.append(img);else{const placeholder=document.createElement("div");placeholder.className="release-placeholder";placeholder.textContent="♫";card.append(placeholder);}
     const body=document.createElement("div");const title=document.createElement("h3");title.textContent=release.title;body.append(title);
     const description=document.createElement("p");description.textContent=release.description||"";body.append(description);
     const links=document.createElement("div");links.className="platforms";let count=0;
-    for(const [key,label] of Object.entries(platforms)){const url=safeUrl(release.links?.[key]);if(!url)continue;const a=document.createElement("a");a.href=url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=label+" ↗";links.append(a);count++}
+    for(const [key,label] of Object.entries(platforms)){const url=safeUrl(release.links?.[key]);if(!url)continue;const a=document.createElement("a");a.dataset.platform=key;a.href=url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=label+" ↗";links.append(a);count++}
     if(!count){const note=document.createElement("span");note.className="unavailable";note.textContent="Streaming links coming soon";links.append(note)}
-    body.append(links);card.append(body);grid.append(card);
+    body.append(links);if(release.premiere?.enabled){const a=document.createElement("a");a.className="release-experience";a.href="/premieres/"+release.id+"/";a.textContent="Experience ↗";body.append(a);}card.append(body);grid.append(card);
   }
-  const exp=cfg.experiences?.aawazein;
-  if(exp?.enabled && safeUrl(exp.url)){const a=document.createElement("a");a.className="button";a.href=safeUrl(exp.url);a.textContent="Explore Aawazein ↗";document.querySelector("#experience-action").replaceWith(a)}
+  const shelfControls=document.querySelector('.musik-shelf-controls');
+  if(grid && shelfControls){
+    const prev=document.getElementById('musik-prev'),next=document.getElementById('musik-next');
+    const refresh=()=>{const max=grid.scrollWidth-grid.clientWidth;shelfControls.hidden=max<2;prev.disabled=grid.scrollLeft<2;next.disabled=grid.scrollLeft>=max-2;};
+    const move=direction=>{const card=grid.querySelector('.release');if(!card)return;const gap=parseFloat(getComputedStyle(grid).columnGap)||0;grid.scrollBy({left:direction*(card.getBoundingClientRect().width+gap),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});};
+    prev.addEventListener('click',()=>move(-1));next.addEventListener('click',()=>move(1));grid.addEventListener('scroll',refresh,{passive:true});window.addEventListener('resize',refresh);if(window.ResizeObserver)new ResizeObserver(refresh).observe(grid);refresh();
+  }
   const icons={
     instagram:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>',
     facebook:'<path d="M15 21v-8h3l.5-4H15V7c0-1.2.4-2 2-2h2V1.4C18.5 1.1 17.5 1 16.5 1 13.3 1 11 3 11 6.7V9H8v4h3v8"/>',

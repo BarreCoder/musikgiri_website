@@ -1,0 +1,24 @@
+.intro:has(.featured-video){display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,70px);align-items:center}.intro:has(.featured-video) h1{font-size:clamp(48px,6vw,92px)}.featured-video{min-width:0}.video-stage{aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#15121c;border:1px solid #433143}.video-stage iframe,.video-load{width:100%;height:100%;border:0;display:block}.video-load{position:relative;cursor:pointer;padding:0;background:#15121c}.video-load img{width:100%;height:100%;object-fit:cover}.video-load span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#c40000;color:white;border-radius:12px;padding:14px 24px}.featured-video p{margin:10px 0 0}.featured-video small{color:var(--muted)}.collection{padding:55px 0 90px}.collection h1{font-size:clamp(48px,7vw,85px)}.collection-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.collection-card{display:grid;grid-template-columns:35% 1fr;gap:20px;align-items:center;border:1px solid #433143;background:#15121c;border-radius:12px;padding:18px}.collection-card img,.release-placeholder{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px}.collection-card h3{font-size:clamp(24px,3vw,40px);margin:8px 0}.collection-card:hover,.collection-card:focus-visible{border-color:var(--pink)}.release-placeholder,.art-placeholder{display:grid;place-content:center;text-align:center;gap:12px;background:radial-gradient(ellipse,#48263d,#15121c);color:#e7b5d2;font-size:2rem}.art-placeholder{height:100%;padding:20px}.art-placeholder small{font-size:.85rem}.art-placeholder strong{font-family:Georgia,serif;font-weight:400}.featured-release{padding-bottom:35px}.featured-release .collection-card{max-width:620px;margin-top:12px}.release-experience{display:inline-block;color:var(--pink);font-size:13px;margin:14px 12px 0 0}.premieres-page #premieres .premiere-frame{animation:none;opacity:0;transition:opacity 1.2s ease;transform:none}.premieres-page #premieres .premiere-frame.is-active{opacity:1}.premiere-mobile-stream-links .unavailable{grid-column:1/-1}.premieres-page #premieres .premiere-bottom-actions{flex-wrap:wrap;gap:12px}@media(max-width:850px){.intro:has(.featured-video),.collection-grid{grid-template-columns:1fr}.featured-video{max-width:640px}.premieres-page #premieres .premiere-mobile-stream-links{grid-template-columns:repeat(auto-fit,minmax(48px,1fr))}}@media(prefers-reduced-motion:reduce){.premieres-page #premieres .premiere-frame{transition:none}}
+
+/* Compact horizontal music shelf, scoped to the homepage. */
+#music.section {padding-block:clamp(36px,5vw,65px)}
+#music .section-head {margin-bottom:20px;align-items:center}
+#music .section-head h2 {font-size:clamp(36px,4.5vw,60px)}
+#music .musik-shelf-controls {display:flex;gap:8px;align-items:center;flex-shrink:0}
+#music .musik-shelf-controls[hidden] {display:none}
+#music .musik-shelf-controls button {width:44px;height:44px;border:1px solid #5e4058;border-radius:50%;background:var(--panel);color:var(--white);cursor:pointer;font-size:20px}
+#music .musik-shelf-controls button:disabled {opacity:.35;cursor:default}
+#music .musik-shelf-controls button:focus-visible,#release-grid:focus-visible {outline:2px solid var(--pink);outline-offset:3px}
+#release-grid {display:flex;align-items:stretch;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:3px;padding:3px 3px 14px;scrollbar-width:thin;scrollbar-color:#69405b transparent;overscroll-behavior-x:contain}
+#release-grid .release {flex:0 0 218px;min-width:0;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:12px;scroll-snap-align:start}
+#release-grid .release > img,#release-grid .release > .release-placeholder {display:block;width:100%;aspect-ratio:1;object-fit:cover}
+#release-grid .release > .release-placeholder {display:grid;place-content:center}
+#release-grid .release > div:last-child {min-width:0;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+#release-grid .release h3 {font-size:clamp(20px,2vw,24px);line-height:1.2;margin:0 0 6px;overflow-wrap:anywhere}
+#release-grid .release p {font-size:12px;line-height:1.5;margin:0 0 12px}
+#release-grid .release .platforms {gap:4px;margin-top:auto}
+#release-grid .platforms a.musik-platform-icon {width:44px;height:44px;min-width:44px;min-height:44px;padding:9px;border-radius:8px}
+#release-grid .platforms a.musik-platform-icon svg {width:21px;height:21px}
+#release-grid .release-experience {margin:10px 0 0;font-size:12px}
+#release-grid .release .lyrics-trigger {margin-top:8px;padding:8px 10px;min-height:36px;font-size:11px}
+@media(max-width:620px){#music .section-head {display:flex;flex-wrap:wrap;gap:8px}#music .section-head p {margin:0;flex-basis:100%;order:3}#music .musik-shelf-controls {margin-left:auto}#release-grid {gap:10px}#release-grid .release {flex-basis:clamp(170px,53vw,205px);padding:10px}}

@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const dialog = document.getElementById('lyrics-aawazein');
+  const dialog = document.querySelector('dialog.lyrics-dialog');
   if (!dialog) return;
   let previousFocus = null;
   function close() {

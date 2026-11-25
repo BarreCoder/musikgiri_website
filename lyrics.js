@@ -2,7 +2,7 @@
   "use strict";
   const grid = document.getElementById("release-grid");
   if (!grid) return;
-  const dialogs = { aawazein: document.getElementById("lyrics-aawazein"), musikgiri: document.getElementById("lyrics-musikgiri") };
+  const dialogs = Object.fromEntries([...document.querySelectorAll("dialog.lyrics-dialog")].map(d=>[d.id.slice(7),d]));
   let previousFocus = null;
   function openLyrics(id) {
     const dialog = dialogs[id];
@@ -28,9 +28,8 @@
   function addButtons() {
     for (const card of grid.querySelectorAll(".release")) {
       if (card.querySelector(".lyrics-trigger")) continue;
-      const title = card.querySelector("h3")?.textContent?.trim().toLowerCase();
-      const id = title === "aawazein" ? "aawazein" : title === "musikgiri" ? "musikgiri" : null;
-      if (!id) continue;
+      const id = card.dataset.releaseId;
+      if (!dialogs[id]) continue;
       const button = document.createElement("button");
       button.type = "button";
       button.className = "lyrics-trigger";
