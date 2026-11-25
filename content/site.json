@@ -135,7 +135,7 @@
     {
       "id": "aawazein-mehfil-ki",
       "title": "Aawazein Mehfil Ki",
-      "description": "A new Musikgiri creation. More details coming soon.",
+      "description": "Feel the sound and the energy of a Mehfil.",
       "status": "released",
       "showInMusik": true,
       "cover": "assets/Aawazein-Mehfil-Ki-cover.webp",
@@ -191,11 +191,11 @@
         "enabled": true,
         "subtitle": "",
         "tagline": "",
-        "description": "Artwork, audio and streaming links coming soon.",
+        "description": "Mehfil has a different energy. The voices in a gathering are a celebration of music, of togetherness, and of the moment. Aawazein Mehfil Ki sets that MUSIKAL mood.",
         "posters": [
           "assets/Aawazein-Mehfil-Ki-poster.webp"
         ],
-        "shareImage": "",
+        "shareImage": "assets/Aawazein-Mehfil-Ki-poster.webp",
         "audio": "",
         "previewLabel": "",
         "artCaption": "Mehfil ki Aawazein — the voices of a gathering, a celebration, and a new Musikgiri creation."
@@ -216,15 +216,23 @@
       "title": "Aawazein Mehfil Ki",
       "paragraphs": [
         {
-          "text": "The next chapter of Musikgiri.",
+          "text": "The 'Mehfil Version' sets the mood.",
           "style": "lead"
         },
         {
-          "text": "The story behind this creation will be shared here soon.",
+          "text": "The voices in a Mehfil (gatherings) have a differnt energy. They are a celebration of music, of togetherness, and of the moment.",
           "style": ""
+        },
+        {
+          "text": "The tabla, the dholak and the sheer Company!",
+          "style": "bold"
+        },
+        {
+          "text": "Aawazein — Some voices and sounds that change the mood.",
+          "style": "signoff"
         }
       ],
-      "image": "",
+      "image": "assets/Aawazein-Mehfil-Ki-poster.webp",
       "imageAlt": "",
       "square": false
     },
