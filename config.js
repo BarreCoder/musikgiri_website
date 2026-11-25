@@ -199,7 +199,7 @@ window.MUSIKGIRI = {
         "shareImage": "assets/Aawazein-Mehfil-Ki-poster.webp",
         "audio": "",
         "previewLabel": "",
-        "artCaption": "Mehfil ki Aawazein — the voices of a gathering, a celebration, and a new Musikgiri creation."
+        "artCaption": ""
       }
     }
   ],
